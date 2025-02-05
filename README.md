@@ -39,7 +39,7 @@
 ## Инструкции по запуску
 
 ### 1. Запустите Eureka Server
-### 2. Запуск микросервисов : Order Service, Customer Service, Product Service(можно не запускать, пока нет смысла)
+### 2. Запуск микросервисов : Order Service, Customer Service, Product Service
 ### 3. Запуск API Gateway
 ### 4. Пример запросов:
   ##	Создать нового клиента:
@@ -58,7 +58,7 @@
         "items": 
         [
           {
-            "productName": "Капучино",
+            "productId": 1,
             "quantity": 2,
             "price": 4.5
           }
