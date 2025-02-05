@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/products")
+@RestController
 @RequiredArgsConstructor
+@RequestMapping("/products")
 public class ProductController {
     private final ProductService productService;
 
