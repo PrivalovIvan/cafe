@@ -25,6 +25,7 @@
 
 ### Взаимодействие сервисов:
 - **Order Service** использует **Customer Service** для получения данных о клиентах.
+- **Order Service** использует **Product Service** для получения данных о продуктах.
 - **API Gateway** маршрутизирует запросы от клиентов к нужному сервису через **Spring Cloud Gateway**.
 
 ## Технологии
@@ -59,8 +60,7 @@
         [
           {
             "productId": 1,
-            "quantity": 2,
-            "price": 4.5
+            "quantity": 2
           }
         ]
       }
