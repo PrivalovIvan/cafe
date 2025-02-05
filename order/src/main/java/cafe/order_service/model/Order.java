@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -28,4 +29,6 @@ public class Order {
 
     @Transient //не сохраняем в бд
     private CustomerDTO customer;
+
+    private BigDecimal totalPrice;
 }
