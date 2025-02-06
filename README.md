@@ -25,6 +25,7 @@
 
 ### Взаимодействие сервисов:
 - **Order Service** использует **Customer Service** для получения данных о клиентах.
+- **Order Service** использует **Product Service** для получения данных о продуктах.
 - **API Gateway** маршрутизирует запросы от клиентов к нужному сервису через **Spring Cloud Gateway**.
 
 ## Технологии
@@ -39,7 +40,7 @@
 ## Инструкции по запуску
 
 ### 1. Запустите Eureka Server
-### 2. Запуск микросервисов : Order Service, Customer Service, Product Service(можно не запускать, пока нет смысла)
+### 2. Запуск микросервисов : Order Service, Customer Service, Product Service
 ### 3. Запуск API Gateway
 ### 4. Пример запросов:
   ##	Создать нового клиента:
@@ -58,9 +59,8 @@
         "items": 
         [
           {
-            "productName": "Капучино",
-            "quantity": 2,
-            "price": 4.5
+            "productId": 1,
+            "quantity": 2
           }
         ]
       }
