@@ -8,6 +8,7 @@
 - **Order Service** — управляет заказами.
 - **Product Service** — управляет продуктами.
 - **Customer Service** — управляет данными клиентов.
+- **Inventory Service** — управляет остатками продуктов.
 
 ### Основные возможности:
 - **CRUD операции** для работы с заказами, продуктами и клиентами.
@@ -26,6 +27,7 @@
 ### Взаимодействие сервисов:
 - **Order Service** использует **Customer Service** для получения данных о клиентах.
 - **Order Service** использует **Product Service** для получения данных о продуктах.
+- **Order Service** использует **Inventory Service** для получения данных о доступности продуктов.
 - **API Gateway** маршрутизирует запросы от клиентов к нужному сервису через **Spring Cloud Gateway**.
 
 ## Технологии
@@ -40,7 +42,7 @@
 ## Инструкции по запуску
 
 ### 1. Запустите Eureka Server
-### 2. Запуск микросервисов : Order Service, Customer Service, Product Service
+### 2. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service
 ### 3. Запуск API Gateway
 ### 4. Пример запросов:
   ##	Создать нового клиента:
