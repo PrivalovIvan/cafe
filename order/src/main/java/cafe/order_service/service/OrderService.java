@@ -10,6 +10,7 @@ import cafe.order_service.model.OrderItem;
 import cafe.order_service.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -32,6 +33,7 @@ public class OrderService {
     }
 
 
+    @Transactional
     public Order createOrder(Order order) {
         for (OrderItem item : order.getItems()) {
             ProductDTO productDTO = productClient.findById(item.getProductId());
@@ -40,7 +42,8 @@ public class OrderService {
                 throw new IllegalArgumentException("Product with ID " + item.getProductId() +
                         " is not available in the requested quantity.");
             } else {
-                inventoryClient.update(item.getProductId(), new InventoryDTO(null, item.getProductId(), inventoryClient.findById(item.getProductId()).getQuantity() - item.getQuantity()));
+                inventoryClient.update(item.getProductId(), new InventoryDTO(null, item.getProductId(),
+                        inventoryClient.findById(item.getProductId()).getQuantity() - item.getQuantity()));
             }
             item.setPrice(productDTO.getPrice());
         }

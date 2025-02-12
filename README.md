@@ -22,6 +22,7 @@
 2. **Order Service** — сервис для работы с заказами.
 3. **Product Service** — сервис для работы с продуктами.
 4. **Customer Service** — сервис для управления данными клиентов.
+4. **Inventory Service** — сервис для хранения данных(количестве) продуктов.
 5. **API Gateway** — централизованный шлюз для маршрутизации запросов к соответствующим сервисам.
 
 ### Взаимодействие сервисов:
@@ -38,13 +39,15 @@
 - **Spring Data JPA** для работы с базой данных.
 - **H2 Database** для хранения данных.
 - **Lombok** для упрощения написания кода.
+- **Spring Cloud Config** для централизованного управления конфигурациями.
 
 ## Инструкции по запуску
 
 ### 1. Запустите Eureka Server
-### 2. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service
-### 3. Запуск API Gateway
-### 4. Пример запросов:
+### 2. Запустите ConfigServerApplication
+### 3. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service
+### 4. Запуск API Gateway
+### 5. Пример запросов:
   ##	Создать нового клиента:
     - POST http://localhost:8080/orders
     - {

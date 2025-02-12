@@ -25,7 +25,7 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private StatusOrder status;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     @JsonManagedReference //@JsonManagedReference показывает, что Order управляет отношением.
     private List<OrderItem> items;
 
