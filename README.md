@@ -40,14 +40,19 @@
 - **H2 Database** для хранения данных.
 - **Lombok** для упрощения написания кода.
 - **Spring Cloud Config** для централизованного управления конфигурациями.
+- **Добавлена поддержка Docker и Docker Compose**.
 
-## Инструкции по запуску
+# Инструкции по запуску
+## ***Docker Compose:*** 
+- **docker-compose up --build** - собрать и запустить контейнеры
+- **docker-compose down** - остановить контейнеры
 
-### 1. Запустите Eureka Server
-### 2. Запустите ConfigServerApplication
-### 3. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service
-### 4. Запуск API Gateway
-### 5. Пример запросов:
+## ***Вручную:***
+- **1. Запустите Eureka Server**
+- **2. Запустите ConfigServerApplication**
+- **3. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service**
+- **4. Запуск API Gateway**
+- **5. Пример запросов:**
   ##	Создать нового клиента:
     - POST http://localhost:8080/orders
     - {
