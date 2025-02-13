@@ -47,11 +47,12 @@
 - **docker-compose up --build** - собрать и запустить контейнеры
 - **docker-compose down** - остановить контейнеры
 
-## ***Вручную:***
-- **1. Запустите Eureka Server**
-- **2. Запустите ConfigServerApplication**
-- **3. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service**
-- **4. Запуск API Gateway**
+## ***Вручную:***  не доступно
+
+[//]: # (- **1. Запустите Eureka Server**)
+[//]: # (- **2. Запустите ConfigServerApplication**)
+[//]: # (- **3. Запуск микросервисов : Order Service, Customer Service, Product Service, Inventory Service**)
+[//]: # (- **4. Запуск API Gateway**)
 - **5. Пример запросов:**
   ##	Создать нового клиента:
     - POST http://localhost:8080/orders
